@@ -94,7 +94,7 @@ func GetSummaryStockItem(c *gin.Context) {
 		join (
 			select max(_it.id) id, concat(year(_it.created_at), '-', month(_it.created_at)) period 
 			from item_trackings _it
-			group by period
+			group by _it.item_id, period
 		) sub_it on it.id = sub_it.id
 	`
 

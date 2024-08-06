@@ -19,7 +19,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "item_id": 3, 
+    "item_id": 1, 
     "stock": 20,
     "updated_by_id": 1,
     "updated_by_role": "Supplier",
