@@ -1,0 +1,81 @@
+
+@host = http://localhost:8080
+
+
+###
+POST {{host}}/create-item 
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "Laptop Asus M2321"
+}
+
+
+
+###
+POST {{host}}/update-stock-item 
+Accept: application/json
+Content-Type: application/json
+
+{
+    "item_id": 3, 
+    "stock": 20,
+    "updated_by_id": 1,
+    "updated_by_role": "Supplier",
+    "remark": "Purchasement"
+}
+
+
+###
+POST {{host}}/update-stock-item 
+Accept: application/json
+Content-Type: application/json
+
+{
+    "item_id": 3, 
+    "stock": -10,
+    "updated_by_id": 1,
+    "updated_by_role": "Supplier",
+    "remark": "Return"
+}
+
+
+###
+POST {{host}}/update-stock-item 
+Accept: application/json
+Content-Type: application/json
+
+{
+    "item_id": 1, 
+    "stock": -10,
+    "updated_by_id": 1,
+    "updated_by_role": "Distributor",
+    "remark": "Sales"
+}
+
+
+###
+POST {{host}}/update-stock-item 
+Accept: application/json
+Content-Type: application/json
+
+{
+    "item_id": 1, 
+    "stock": -10,
+    "updated_by_id": 1,
+    "updated_by_role": "Distributor",
+    "remark": "Return"
+}
+
+
+
+###
+GET {{host}}/summary-stock-item 
+Accept: application/json
+Content-Type: application/json
+
+###
+GET {{host}}/average-item-in-per-supplier 
+Accept: application/json
+Content-Type: application/json
